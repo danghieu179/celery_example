@@ -5,6 +5,7 @@ import config
 from app import app, db
 from app.rectangle.controllers import connect
 from app.rectangle.models import Rectangle
+
 session = connect(config.SQLALCHEMY_DATABASE_TEST_URI)
 
 

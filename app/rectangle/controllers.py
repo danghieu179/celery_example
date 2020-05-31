@@ -1,3 +1,4 @@
+import sys
 from app import db, celery
 from flask import Blueprint, request, render_template, jsonify
 import sqlalchemy
@@ -8,7 +9,6 @@ from app.rectangle.models import Rectangle
 import config
 rectangle = Blueprint('rectangle', __name__, url_prefix='/')
 
-
 def connect(uri_db):
     """Connects to the database and return a session"""
     con = sqlalchemy.create_engine(uri_db)
@@ -17,9 +17,10 @@ def connect(uri_db):
     session = Session()
     return session
 
-
-session = connect(config.SQLALCHEMY_DATABASE_URI)
-
+if str(sys.argv[0]) == 'test.py':
+    session = connect(config.SQLALCHEMY_DATABASE_TEST_URI)
+else:
+    session = connect(config.SQLALCHEMY_DATABASE_URI)
 
 def check_value_input(value):
     error = ""

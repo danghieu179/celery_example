@@ -8,7 +8,7 @@ The application provides one example of background tasks using Celery:
 - Example: Compute area, perimeter asynchronously.
 
 Here is a screenshot of this application:
-<center>(image_readme/screenshot_1.png)</center>
+<center>![alt text](https://github.com/danghieu1709/celery_example/blob/master/image_readme/screenshot_1.png?raw=true)</center>
 
 Quick Setup
 -----------

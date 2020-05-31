@@ -8,8 +8,7 @@ The application provides one example of background tasks using Celery:
 - Example: Compute area, perimeter asynchronously.
 
 Here is a screenshot of this application:
-
-<center><img src="https://github.com/danghieu1709/celery_example/blob/master/image_readme/screenshot_1.png"></center>
+![Screen Shot 1](image_readme/screenshot_1.png)
 
 Quick Setup
 -----------
@@ -26,17 +25,17 @@ Run Unittest
 -----------
 1. Open a new terminal window. Then run python file: `venv/bin/python test.py`.
 2. Result in terminal
-<center>(image_readme/screenshot_2.png)</center>
+![Screen Shot 2](image_readme/screenshot_2.png)
 3. Beside, you can check result by html file in report folder
 
 Using Application
 -----------
 1. Create new rectangle by click button Create
-<center>(image_readme/screenshot_3.png)</center>
+![Screen Shot 3](image_readme/screenshot_3.png)
 2. Check rectangle exist on database by click button Get
-<center>(image_readme/screenshot_4.png)</center>
+![Screen Shot 4](image_readme/screenshot_4.png)
 3. Compute area, perimeter of rectangle by click button Compute
-<center>(image_readme/screenshot_5.png)</center>
+![Screen Shot 5](image_readme/screenshot_5.png)
 
 Done!
 -----------

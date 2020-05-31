@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>Flask + Celery Examples</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="p-4">
+        <h1 class="mb-5">Flask + Celery Examples</h1>
+        <div class="row mx-0">
+            <div style="width:600px" class="mr-5">
+                <form>
+                    <div class="form-group row mx-0">
+                        <label class="mb-0 d-flex align-items-center mr-3" style="width:60px">Width:</label>
+                        <input type="text" onkeypress="onlyNumber(event)" onpaste="onPasteOnlyNumber(event)"
+                            class="form-control" id="width" placeholder="Width" style="width:200px">
+                    </div>
+                    <div id="error_width" style="margin-left: 76px;" class="text-danger mb-3"></div>
+                    <div class="form-group row mx-0">
+                        <label class="mb-0 d-flex align-items-center mr-3" style="width:60px">Height:</label>
+                        <input type="text" class="form-control" onkeypress="onlyNumber(event)"
+                            onpaste="onPasteOnlyNumber(event)" id="height" placeholder="Height" style="width:200px"
+                            required="True">
+                    </div>
+                    <div id="error_height" style="margin-left: 76px;" class="text-danger mb-3"></div>
+                </form>
+                <div class="row mx-0">
+                    <button type="submit" onclick="createRectangle()"
+                        class="btn btn-primary d-flex justify-content-end mr-2"
+                        style="margin-left: 76px;">Create</button>
+                </div>
+                <div id="error_rectangle" style="margin-left: 76px;" class="text-danger mb-3"></div>
+                <div class="mx-0 row mt-2">
+                    <p style="width:120px">Rectangle ID:</p>
+                    <p id="rectangle_id"></p>
+                </div>
+            </div>
+            <div>
+                <div class="row mx-0">
+                    <form class="mb-0">
+                        <div class="form-group row m-0">
+                            <label class="mb-0 d-flex align-items-center mr-3">Rectangle ID:</label>
+                            <input type="text" class="form-control" id="rectangle" placeholder="Rectangle ID"
+                                style="width:200px" onkeypress="onlyNumber(event)" onpaste="onPasteOnlyNumber(event)">
+                        </div>
+                    </form>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" onclick="computeRectangle()" id="create-rectangle"
+                            class="btn btn-primary d-flex justify-content-end ml-3">Compute</button>
+                        <button type="submit" onclick="getRectangle()" id="btn-get"
+                            class="btn btn-primary d-flex justify-content-end ml-3">Get</button>
+                    </div>
+                </div>
+                <div class="row mt-2 text-danger" style="margin-left: 113px;">
+                    <p id="error"></p>
+                </div>
+                <div class="mx-0 row mt-2">
+                    <p style="width:120px">Width:</p>
+                    <p id="result_width"></p>
+                </div>
+                <div class="mx-0 row mt-2">
+                    <p style="width:120px">Height:</p>
+                    <p id="result_height"></p>
+                </div>
+                <div class="mx-0 row mt-2">
+                    <p style="width:120px">Area:</p>
+                    <p id="area"></p>
+                </div>
+                <div class="mx-0 row">
+                    <p style="width:120px">Perimeter:</p>
+                    <p id="perimeter"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/scripts.js" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</html>
